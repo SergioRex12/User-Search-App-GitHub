@@ -13,7 +13,7 @@ const Nav = () => {
             <main>
                 <section className="top-info">
                     <h1 className="text-gray-600 dark:text-gray-400">Rex GitHub User</h1>
-                    <a onClick={change}><h2> {modoOscuro ? 'Light' : 'Dark'}</h2></a>
+                    <a className="text-gray-600 dark:text-gray-400" onClick={change}><h2> {modoOscuro ? 'Light' : 'Dark'}</h2></a>
                 </section>
             </main>
         </div>
