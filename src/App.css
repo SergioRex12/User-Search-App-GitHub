@@ -88,6 +88,10 @@ body {
   font-weight: bold;
 }
 
+.top-info a:hover{
+  cursor: pointer;
+}
+
 .user-statsWhite {
   background-color: #d0d4dd;
 }
