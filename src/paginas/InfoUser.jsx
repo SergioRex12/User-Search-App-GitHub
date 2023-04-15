@@ -62,19 +62,21 @@ const InfoUser = () => {
 
         <section className={modoOscuro ? 'info-user-font info-user-fontDark' : `info-user-font info-user-fontLight`}>
             <section className="info-user">
-                <img src={avatar} alt="Profile image" />
 
                 <section>
                     <div className="profile-name">
-                        <h3 className={modoOscuro ? 'text-white': 'text-gray-900'}>{name}</h3>
-                        
-                        <h3 className={modoOscuro ? 'text-white': 'text-gray-900'}>{formatData(created_at)}</h3>
+                        <img src={avatar} alt="Profile image" />
+                        <div>
+                            <h3 className={modoOscuro ? 'text-white': 'text-gray-900'}>{name}</h3>
+
+                            <a className="user-url-profile" href={html_url} target = "_blank"> @{login} </a>
+                            
+                            <h3 className={modoOscuro ? 'text-white': 'text-gray-900'}>{formatData(created_at)}</h3>
+                        </div>
                     </div>
                     
 
-                    <div>
-                        <a className="user-url-profile" href={html_url} target = "_blank"> @{login} </a>
-                    </div>
+
 
 
                     <h3 className={`info-bio ${bio ? 'yes-info' : 'not-info'}`}>{bio ? bio : "El usuario no tiene bio"}</h3>
@@ -106,13 +108,13 @@ const InfoUser = () => {
                         </section>
                     </section>
 
-
                     <section className="user-links">
                         <h3 className={changeState(location)}> <span><i className="fa fa-map-marker" aria-hidden="true"></i></span> {location ? location : "No disponible"}</h3>
                         <h3 className={changeState(twitter_username)}> <span><i className="fa fa-twitter" aria-hidden="true"></i></span> {twitter_username ? twitter_username : "No disponible"}</h3>
                         <h3 className={changeState(blog)}> <span><i className="fa fa-link" aria-hidden="true"></i></span> {blog ? blog : "No disponible"}</h3>
                         <h3 className={changeState(blog)}> <span><i className="fa fa-building" aria-hidden="true"></i></span> {company ? company : "No disponible"}</h3>
                     </section>
+
 
                 </section>
             </section>
